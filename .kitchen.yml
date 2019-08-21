@@ -1,0 +1,26 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: aws-key
+  security_group_ids: ["sg-d6fac09a"]
+  region: us-east-1
+  instance_type: t2.micro
+  associate_public_ip: true
+
+provisioner:
+  name: shell
+  chef_license: accept
+
+platforms:
+  - name: bionic64-php
+    driver:
+      image_id: ami-04de9d7685088ce3e
+transport:
+    ssh_key: "/home/hpeymark/Downloads/aws-key.pem"
+    username: ubuntu
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
