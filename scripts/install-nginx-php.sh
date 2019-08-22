@@ -9,4 +9,4 @@ apt-get clean
 apt-get update
 apt-get upgrade -y
 
-apt-get -y install nginx php-fpm
+apt-get -y install nginx php-fpm unzip
