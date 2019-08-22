@@ -14,9 +14,9 @@ provisioner:
 platforms:
   - name: bionic64-php
     driver:
-      image_id: ami-04de9d7685088ce3e
+      image_id: <put ami id from packer>
 transport:
-    ssh_key: "/home/hpeymark/Downloads/aws-key.pem"
+    ssh_key: "<put ssh path to the key that will be used>"
     username: ubuntu
 
 verifier:
